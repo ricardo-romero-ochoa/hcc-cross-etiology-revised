@@ -7,16 +7,12 @@ This repository contains the complete reproducible R pipeline for the revised ma
 
 **Cross-etiology transcriptomic conservation in hepatocellular carcinoma reveals opposing proliferation and hepatocyte-loss programs validated across cohorts**
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
-=======
-=======
 The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
 
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
+The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
+
 The workflow implements a cpmrehensive revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+
 
 
 ## Main analyses
@@ -55,20 +51,11 @@ scripts/03_discovery_hallmark_gsva.R             Hallmark GSVA and pathway contr
 scripts/03b_derive_hepatitis_axes.R              HBV injury axis and top-N gene sets
 scripts/04_meta_modules.R                        meta-analysis and module construction
 scripts/05_validate_geo_cohorts.R                external GEO validation
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 scripts/06_tcga_lihc_pipeline.R                  memory-safe TCGA-LIHC module and Cox models
 scripts/06_tcga_lihc_pipeline_full_se_legacy.R   legacy full SummarizedExperiment TCGA workflow
 scripts/06b_tcga_survival_cox_from_cached_inputs.R
                                                    rebuilds Cox table from cached TCGA score/clinical table
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 scripts/06_tcga_lihc_pipeline.R                  TCGA-LIHC module and Cox models
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
 scripts/07_estimate_adjustment.R                 ESTIMATE exploratory adjustment
 scripts/08_cibersortx_export_GSE121248.R         CIBERSORTx mixture export
 scripts/09_cibersortx_adjusted_regression_GSE121248.R
@@ -78,19 +65,10 @@ scripts/11_make_revision_figures.R               Figures 1, 2, 4 and supplement
 scripts/11b_make_missing_figures.R               Figures 3 and 5
 scripts/12_make_manuscript_tables.R              manuscript tables
 scripts/13_summarize_revision_results.R          consolidated result summaries
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 scripts/14_make_supplementary_figures.R          creates supplementary figures
 scripts/15_make_supplementary_tables.R           creates supplementary tables
 scripts/16_revision_repository_audit.R           final repository/reproducibility audit
 REPOSITORY_MANIFEST.csv                          reviewer-facing manifest of reproducibility objects
-<<<<<<< HEAD
-=======
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
-=======
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 scripts/run_all.R                                main pipeline launcher
 ```
 
@@ -104,17 +82,13 @@ Install dependencies with:
 Rscript scripts/00_install_packages.R
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
-=======
-=======
+
 
 The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
 
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
+
 The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `survival`, `broom`, and `tidyverse` packages.
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
 
 
 ## Quick start
@@ -126,17 +100,12 @@ Rscript scripts/00_install_packages.R
 Rscript scripts/run_all.R
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
-=======
-=======
+
 
 CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
 
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 `run_all.R` stops before the CIBERSORTx-adjusted regression because CIBERSORTx must be run externally.
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
 
 
 For a faster first pass, set the following in `config/analysis.yml`:
@@ -145,11 +114,6 @@ For a faster first pass, set the following in `config/analysis.yml`:
 run_tcga: false
 run_estimate: false
 ```
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 
 
 ### Note on TCGA memory use
@@ -178,13 +142,7 @@ Rscript scripts/06b_tcga_survival_cox_from_cached_inputs.R
 
 This avoids re-downloading TCGA/GDC data.
 
-<<<<<<< HEAD
-=======
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
-=======
 
-
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
 ## CIBERSORTx workflow
 
 First export the mixture file:
@@ -313,10 +271,7 @@ For a source-only check before generated outputs exist, run:
 Rscript scripts/16_revision_repository_audit.R
 ```
 
-<<<<<<< HEAD
-The strict audit should pass before creating the GitHub release and Zenodo archive.
-=======
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
-=======
+The strict audit should pass to recreate all main and supplementary figures and tables.
+
 The strict audit should pass if evrything was run correctly
 >>>>>>> 146087c44c8be66269bd538e92275100335647bd
