@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1272701837.svg)](https://doi.org/10.5281/zenodo.20738435)
+
 # HCC cross-etiology transcriptomic revision pipeline
 
 This repository contains the complete reproducible R pipeline for the revised manuscript:
