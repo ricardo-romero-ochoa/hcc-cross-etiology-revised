@@ -216,9 +216,9 @@ paper_package/figures/
 - `HBV_INJURY_EXTENDED_7792` is the extended sensitivity injury representation.
 - Persistence of the HBV injury coefficient after E2F/G2M and CIBERSORTx adjustment supports a **residual tumor-associated HBV injury component**, not definitive tumor-cell-intrinsic biology.
 
-## Recommended citation in the manuscript
+## Manuscript citation
 
-The repository and generated intermediate files should be cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
+The repository and generated intermediate files are cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
 
 
 ## Final revision audit
@@ -242,7 +242,7 @@ For a source-only check before generated outputs exist, run:
 Rscript scripts/16_revision_repository_audit.R
 ```
 
-The strict audit should pass before creating the GitHub release and Zenodo archive.
+The strict audit should pass to reproduce all main and supplementary tables.
 
 ## Final reviewer-facing output audit
 
