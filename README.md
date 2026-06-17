@@ -1,6 +1,3 @@
-[![DOI](https://zenodo.org/badge/1272701837.svg)](https://doi.org/10.5281/zenodo.20738435)
-
-
 # HCC cross-etiology transcriptomic revision pipeline
 
 This repository contains the complete reproducible R pipeline for the revised manuscript:
@@ -8,12 +5,6 @@ This repository contains the complete reproducible R pipeline for the revised ma
 **Cross-etiology transcriptomic conservation in hepatocellular carcinoma reveals opposing proliferation and hepatocyte-loss programs validated across cohorts**
 
 The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
-
-The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
-
-The workflow implements a cpmrehensive revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
-
-
 
 ## Main analyses
 
@@ -55,7 +46,6 @@ scripts/06_tcga_lihc_pipeline.R                  memory-safe TCGA-LIHC module an
 scripts/06_tcga_lihc_pipeline_full_se_legacy.R   legacy full SummarizedExperiment TCGA workflow
 scripts/06b_tcga_survival_cox_from_cached_inputs.R
                                                    rebuilds Cox table from cached TCGA score/clinical table
-scripts/06_tcga_lihc_pipeline.R                  TCGA-LIHC module and Cox models
 scripts/07_estimate_adjustment.R                 ESTIMATE exploratory adjustment
 scripts/08_cibersortx_export_GSE121248.R         CIBERSORTx mixture export
 scripts/09_cibersortx_adjusted_regression_GSE121248.R
@@ -84,7 +74,6 @@ Rscript scripts/00_install_packages.R
 
 The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
 
-
 ## Quick start
 
 Run the core pipeline:
@@ -96,16 +85,13 @@ Rscript scripts/run_all.R
 
 CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
 
-
-`run_all.R` excludes the CIBERSORTx-adjusted regression because CIBERSORTx must be run externally.
-
-
 For a faster first pass, set the following in `config/analysis.yml`:
 
 ```yaml
 run_tcga: false
 run_estimate: false
 ```
+
 
 
 ### Note on TCGA memory use
@@ -133,7 +119,6 @@ Rscript scripts/06b_tcga_survival_cox_from_cached_inputs.R
 ```
 
 This avoids re-downloading TCGA/GDC data.
-
 
 ## CIBERSORTx workflow
 
@@ -182,12 +167,8 @@ Important tables:
 
 ```text
 results/tables/dataset_inventory.tsv
-<<<<<<< HEAD
 results/tables/inclusion_exclusion_criteria.tsv
 results/tables/inclusion_exclusion_table.tsv     compatibility alias
-=======
-results/tables/inclusion_exclusion_table.tsv
->>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
 results/tables/tissue_label_audit.tsv
 results/tables/gene_symbol_overlap_audit.tsv
 results/tables/discovery_hallmark_combined.tsv
@@ -233,9 +214,9 @@ paper_package/figures/
 - `HBV_INJURY_EXTENDED_7792` is the extended sensitivity injury representation.
 - Persistence of the HBV injury coefficient after E2F/G2M and CIBERSORTx adjustment supports a **residual tumor-associated HBV injury component**, not definitive tumor-cell-intrinsic biology.
 
-## Manuscript citation
+## Recommended citation in the manuscript
 
-The repository and generated intermediate files are cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
+The repository and generated intermediate files should be cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
 
 
 ## Final revision audit
@@ -259,6 +240,15 @@ For a source-only check before generated outputs exist, run:
 Rscript scripts/16_revision_repository_audit.R
 ```
 
-The strict audit should pass to recreate all main and supplementary figures and tables.
+The strict audit should pass before creating the GitHub release and Zenodo archive.
 
-The strict audit should pass if evrything was run correctly
+## Final reviewer-facing output audit
+
+After the main pipeline has completed, run:
+
+```bash
+Rscript scripts/17_finalize_reviewer_outputs.R
+```
+
+This generates the tissue-label audit, gene-symbol overlap audit, manuscript-table alias files required by the repository manifest, the supplementary-table index, and then runs the strict repository audit.
+
