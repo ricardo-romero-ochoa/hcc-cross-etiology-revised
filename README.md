@@ -97,9 +97,7 @@ Rscript scripts/run_all.R
 CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
 
 
-CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
-
-`run_all.R` stops before the CIBERSORTx-adjusted regression because CIBERSORTx must be run externally.
+`run_all.R` excludes the CIBERSORTx-adjusted regression because CIBERSORTx must be run externally.
 
 
 For a faster first pass, set the following in `config/analysis.yml`:
@@ -235,13 +233,9 @@ paper_package/figures/
 - `HBV_INJURY_EXTENDED_7792` is the extended sensitivity injury representation.
 - Persistence of the HBV injury coefficient after E2F/G2M and CIBERSORTx adjustment supports a **residual tumor-associated HBV injury component**, not definitive tumor-cell-intrinsic biology.
 
-## Recommended citation in the manuscript
+## Manuscript citation
 
-The repository and generated intermediate files should be cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
+The repository and generated intermediate files are cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
 
 
 ## Final revision audit
@@ -268,4 +262,3 @@ Rscript scripts/16_revision_repository_audit.R
 The strict audit should pass to recreate all main and supplementary figures and tables.
 
 The strict audit should pass if evrything was run correctly
->>>>>>> 146087c44c8be66269bd538e92275100335647bd
