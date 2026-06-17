@@ -85,12 +85,6 @@ Rscript scripts/00_install_packages.R
 The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
 
 
-The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
-
-
-The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `survival`, `broom`, and `tidyverse` packages.
-
-
 ## Quick start
 
 Run the core pipeline:
