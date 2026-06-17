@@ -1,0 +1,322 @@
+[![DOI](https://zenodo.org/badge/1243934990.svg)](https://doi.org/10.5281/zenodo.20298126)
+
+
+# HCC cross-etiology transcriptomic revision pipeline
+
+This repository contains the complete reproducible R pipeline for the revised manuscript:
+
+**Cross-etiology transcriptomic conservation in hepatocellular carcinoma reveals opposing proliferation and hepatocyte-loss programs validated across cohorts**
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
+=======
+=======
+The workflow implements the reviewer-driven revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
+
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+The workflow implements a cpmrehensive revision package: expanded GEO validation, explicit cohort curation, Hallmark GSVA, gene-level meta-analysis with heterogeneity, robust module-score construction, module-size sensitivity analysis, HBV injury-axis derivation, CIBERSORTx-adjusted regression, and TCGA-LIHC Cox modeling.
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+
+
+## Main analyses
+
+The pipeline performs the following steps:
+
+1. Curates GEO and TCGA-LIHC datasets.
+2. Parses and audits tumor/non-tumor labels.
+3. Maps microarray probes to HGNC symbols.
+4. Scores MSigDB Hallmark pathways with GSVA/ssGSEA-compatible workflows.
+5. Performs limma differential modeling in HBV-HCC and HCV-HCC discovery cohorts.
+6. Performs inverse-variance fixed-effect meta-analysis and REML random-effects sensitivity analysis.
+7. Reports heterogeneity using I² and REML-estimated τ².
+8. Constructs ProlifHubScore, HepLossScore, and HCCStateScore.
+9. Validates HCCStateScore across independent GEO HCC cohorts.
+10. Performs module-size robustness analysis across top-10, top-15, top-20, top-30, and top-50 definitions.
+11. Derives an HBV injury axis from GSE83148 using an ordinal ALT/AST/HBV-DNA injury index.
+12. Generates HBV_INJURY top-N and extended gene sets.
+13. Exports GSE121248 mixture data for CIBERSORTx.
+14. Imports CIBERSORTx cell fractions and fits proliferation + immune-composition adjusted HBV injury models.
+15. Computes TCGA-LIHC module scores and Cox proportional-hazards models.
+16. Generates manuscript-ready figures and tables.
+
+## Repository structure
+
+```text
+R/_shared.R                                      shared functions
+config/analysis.yml                              global analysis settings
+config/datasets.yml                              cohort registry and label rules
+scripts/00_install_packages.R                    install dependencies
+scripts/01_dataset_inventory.R                   dataset inventory / inclusion table
+scripts/02_download_and_curate_geo.R             GEO download and preprocessing
+scripts/02b_audit_gene_symbol_overlap.R          gene-symbol overlap audit
+scripts/02c_audit_tissue_labels.R                tissue-label audit
+scripts/03_discovery_hallmark_gsva.R             Hallmark GSVA and pathway contrasts
+scripts/03b_derive_hepatitis_axes.R              HBV injury axis and top-N gene sets
+scripts/04_meta_modules.R                        meta-analysis and module construction
+scripts/05_validate_geo_cohorts.R                external GEO validation
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+scripts/06_tcga_lihc_pipeline.R                  memory-safe TCGA-LIHC module and Cox models
+scripts/06_tcga_lihc_pipeline_full_se_legacy.R   legacy full SummarizedExperiment TCGA workflow
+scripts/06b_tcga_survival_cox_from_cached_inputs.R
+                                                   rebuilds Cox table from cached TCGA score/clinical table
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+scripts/06_tcga_lihc_pipeline.R                  TCGA-LIHC module and Cox models
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+scripts/07_estimate_adjustment.R                 ESTIMATE exploratory adjustment
+scripts/08_cibersortx_export_GSE121248.R         CIBERSORTx mixture export
+scripts/09_cibersortx_adjusted_regression_GSE121248.R
+                                                   HBV injury adjusted regression
+scripts/10_module_size_sensitivity.R             module-size robustness
+scripts/11_make_revision_figures.R               Figures 1, 2, 4 and supplement
+scripts/11b_make_missing_figures.R               Figures 3 and 5
+scripts/12_make_manuscript_tables.R              manuscript tables
+scripts/13_summarize_revision_results.R          consolidated result summaries
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+scripts/14_make_supplementary_figures.R          creates supplementary figures
+scripts/15_make_supplementary_tables.R           creates supplementary tables
+scripts/16_revision_repository_audit.R           final repository/reproducibility audit
+REPOSITORY_MANIFEST.csv                          reviewer-facing manifest of reproducibility objects
+<<<<<<< HEAD
+=======
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+=======
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+scripts/run_all.R                                main pipeline launcher
+```
+
+## Requirements
+
+R >= 4.3 is recommended.
+
+Install dependencies with:
+
+```bash
+Rscript scripts/00_install_packages.R
+```
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
+=======
+=======
+
+The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `data.table`, `survival`, `broom`, `scales`, `officer`, `flextable`, and `tidyverse` packages.
+
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+The pipeline uses CRAN and Bioconductor packages including `GEOquery`, `Biobase`, `limma`, `GSVA`, `msigdbr`, `metafor`, `pROC`, `TCGAbiolinks`, `survival`, `broom`, and `tidyverse` packages.
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+
+
+## Quick start
+
+Run the core pipeline:
+
+```bash
+Rscript scripts/00_install_packages.R
+Rscript scripts/run_all.R
+```
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
+=======
+=======
+
+CIBERSORTx itself must be run externally. `run_all.R` can export the mixture file, and the adjusted-regression step will only run after `data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt` is available.
+
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+`run_all.R` stops before the CIBERSORTx-adjusted regression because CIBERSORTx must be run externally.
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+
+
+For a faster first pass, set the following in `config/analysis.yml`:
+
+```yaml
+run_tcga: false
+run_estimate: false
+```
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+
+
+### Note on TCGA memory use
+
+`scripts/06_tcga_lihc_pipeline.R` is the default memory-safe TCGA workflow. It avoids `GDCprepare()` and reads downloaded STAR-count files one at a time, extracting only ProlifHub/HepLoss genes required for module scoring. This prevents the common operating-system-level `Killed` failure caused by assembling the full TCGA-LIHC `SummarizedExperiment` object on machines with limited RAM.
+
+The older full-object implementation is preserved only for reference as:
+
+```text
+scripts/06_tcga_lihc_pipeline_full_se_legacy.R
+```
+
+## TCGA Cox-table recovery
+
+`scripts/06_tcga_lihc_pipeline.R` writes the Cox model output directly to:
+
+```text
+results/tables/tcga_lihc_survival_cox_models.tsv
+```
+
+If TCGA download and clinical merge already completed and `results/tables/tcga_lihc_module_scores_with_clinical.tsv` exists, but the Cox table is missing, regenerate only the Cox table with:
+
+```bash
+Rscript scripts/06b_tcga_survival_cox_from_cached_inputs.R
+```
+
+This avoids re-downloading TCGA/GDC data.
+
+<<<<<<< HEAD
+=======
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+=======
+
+
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+## CIBERSORTx workflow
+
+First export the mixture file:
+
+```bash
+Rscript scripts/08_cibersortx_export_GSE121248.R
+```
+
+This creates:
+
+```text
+data/external/CIBERSORTx/GSE121248_CIBERSORTx_mixture.txt
+```
+
+Run CIBERSORTx externally with:
+
+```text
+Mode: Impute Cell Fractions
+Signature matrix: LM22
+Analysis mode: Relative
+Permutations: 100 or 500
+Quantile normalization: enabled for microarray input
+Batch correction: disabled
+Absolute mode: disabled
+```
+
+Save the result file as:
+
+```text
+data/external/CIBERSORTx/GSE121248_CIBERSORTx_Results.txt
+```
+
+Then run:
+
+```bash
+Rscript scripts/09_cibersortx_adjusted_regression_GSE121248.R
+Rscript scripts/11b_make_missing_figures.R
+Rscript scripts/12_make_manuscript_tables.R
+Rscript scripts/13_summarize_revision_results.R
+```
+
+## Main outputs
+
+Important tables:
+
+```text
+results/tables/dataset_inventory.tsv
+<<<<<<< HEAD
+results/tables/inclusion_exclusion_criteria.tsv
+results/tables/inclusion_exclusion_table.tsv     compatibility alias
+=======
+results/tables/inclusion_exclusion_table.tsv
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+results/tables/tissue_label_audit.tsv
+results/tables/gene_symbol_overlap_audit.tsv
+results/tables/discovery_hallmark_combined.tsv
+results/tables/meta_analysis_with_heterogeneity.tsv
+results/tables/module_gene_panels_top20.tsv
+results/tables/geo_validation_summary.tsv
+results/tables/module_size_robustness.tsv
+results/tables/GSE83148_HBV_INJURY_derivation_full.tsv
+results/tables/HBV_INJURY_TOP_2000_gene_set.tsv
+results/tables/HBV_INJURY_EXTENDED_7792_gene_set.tsv
+results/tables/gse121248_hbv_injury_topN_extended_manuscript_summary.tsv
+results/tables/tcga_lihc_survival_cox_models.tsv
+```
+
+Manuscript-ready tables are written to:
+
+```text
+manuscript/tables/
+```
+
+Important figures:
+
+```text
+results/figures/Fig1_revised_workflow.pdf/png
+results/figures/Fig2_hallmark_dotplot.pdf/png
+results/figures/Fig3_discovery_module_boxplots.pdf/png
+results/figures/Fig4_multicohort_validation.pdf/png
+results/figures/Fig5_HBV_INJURY_adjusted_coefficients.pdf/png
+results/figures/SuppFig_module_size_robustness.pdf
+```
+
+Copies are also written to:
+
+```text
+paper_package/figures/
+```
+
+## Manuscript interpretation rules
+
+- `HCCStateScore` is a **bulk transcriptomic tumor-state score**, not an early detection biomarker.
+- Tumor/non-tumor AUC values quantify separability in retrospective tissue transcriptomes.
+- `HBV_INJURY_TOP_2000` is the compact primary injury representation.
+- `HBV_INJURY_EXTENDED_7792` is the extended sensitivity injury representation.
+- Persistence of the HBV injury coefficient after E2F/G2M and CIBERSORTx adjustment supports a **residual tumor-associated HBV injury component**, not definitive tumor-cell-intrinsic biology.
+
+## Recommended citation in the manuscript
+
+The repository and generated intermediate files should be cited in the Data Availability statement. Raw data remain available from GEO and TCGA/GDC.
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd
+
+
+## Final revision audit
+
+After running the full pipeline and, when applicable, importing the external CIBERSORTx output, run:
+
+```bash
+Rscript scripts/16_revision_repository_audit.R --strict
+```
+
+The audit reads `REPOSITORY_MANIFEST.csv`, checks that all reviewer-requested reproducibility objects are present, and writes:
+
+```text
+results/revision_audit/repository_manifest_audit.csv
+results/revision_audit/repository_manifest_audit.tsv
+```
+
+For a source-only check before generated outputs exist, run:
+
+```bash
+Rscript scripts/16_revision_repository_audit.R
+```
+
+<<<<<<< HEAD
+The strict audit should pass before creating the GitHub release and Zenodo archive.
+=======
+>>>>>>> de0c748d3b558ba656b9e43a99b5bec165a230a4
+=======
+The strict audit should pass if evrything was run correctly
+>>>>>>> 146087c44c8be66269bd538e92275100335647bd

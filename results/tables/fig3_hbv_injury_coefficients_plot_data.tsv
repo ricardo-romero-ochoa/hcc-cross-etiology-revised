@@ -1,0 +1,25 @@
+injury_set	analysis_role	model	estimate	conf.low	conf.high	p.value	percent_retained_vs_unadjusted	model_short	injury_set_label	sig_label	p_text
+HBV_INJURY_TOP_2000	compact_primary	unadjusted	0.2370427991470107	0.08856157432393533	0.3855240239700861	0.00202655137559117	100	Raw tumor effect	HBV_INJURY_TOP_2000
+compact primary	**	**
+p = 0.00203
+HBV_INJURY_TOP_2000	compact_primary	proliferation_adjusted	0.13039905294306417	-0.04940392695204493	0.31020203283817327	0.15337244396081426	55.01076320913357	E2F/G2M adjusted	HBV_INJURY_TOP_2000
+compact primary	ns	ns
+p = 0.153
+HBV_INJURY_TOP_2000	compact_primary	proliferation_cibersortx_pc_adjusted	0.1901903042101876	0.028056523081781	0.3523240853385943	0.0219611925702157	80.2345841740732	E2F/G2M + CIBERSORTx PCs	HBV_INJURY_TOP_2000
+compact primary	*	*
+p = 0.022
+HBV_INJURY_TOP_2000	compact_primary	proliferation_selected_fraction_adjusted	0.18814634652249823	0.03833558168028955	0.3379571113647069	0.0143872336853973	79.37231048550537	E2F/G2M + selected fractions	HBV_INJURY_TOP_2000
+compact primary	*	*
+p = 0.0144
+HBV_INJURY_EXTENDED_7792	extended_sensitivity	unadjusted	0.23279473628624367	0.15996929673378998	0.3056201758386974	5.922790493723865e-9	100	Raw tumor effect	HBV_INJURY_EXTENDED_7792
+extended sensitivity	***	***
+p < 1e-4
+HBV_INJURY_EXTENDED_7792	extended_sensitivity	proliferation_adjusted	0.12498265000843614	0.04060747145037736	0.20935782856649493	0.004079746628983	53.687919238327574	E2F/G2M adjusted	HBV_INJURY_EXTENDED_7792
+extended sensitivity	**	**
+p = 0.00408
+HBV_INJURY_EXTENDED_7792	extended_sensitivity	proliferation_cibersortx_pc_adjusted	0.14754405367662995	0.06618331242073	0.2289047949325299	4.995459324941132e-4	63.379462968273586	E2F/G2M + CIBERSORTx PCs	HBV_INJURY_EXTENDED_7792
+extended sensitivity	***	***
+p = 5.00e-04
+HBV_INJURY_EXTENDED_7792	extended_sensitivity	proliferation_selected_fraction_adjusted	0.13343099370846415	0.05972934104945138	0.20713264636747697	5.182124431552317e-4	57.31701491067987	E2F/G2M + selected fractions	HBV_INJURY_EXTENDED_7792
+extended sensitivity	***	***
+p = 5.18e-04

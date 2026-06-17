@@ -1,0 +1,11 @@
+file	exists
+results/tables/tissue_label_audit.tsv	FALSE
+results/tables/gene_symbol_overlap_audit.tsv	FALSE
+results/tables/discovery_hallmark_combined.tsv	TRUE
+results/tables/meta_analysis_with_heterogeneity.tsv	TRUE
+results/tables/module_gene_panels_top20.tsv	TRUE
+results/tables/geo_validation_summary.tsv	TRUE
+results/tables/module_size_robustness.tsv	TRUE
+results/tables/HBV_INJURY_topN_extended_summary.tsv	TRUE
+results/tables/gse121248_hbv_injury_topN_extended_manuscript_summary.tsv	TRUE
+results/tables/tcga_lihc_survival_cox_models.tsv	TRUE

@@ -1,0 +1,70 @@
+# Raw and large processed data
+# GEO/GDC files are downloaded by scripts and should not be versioned.
+data/raw/GEO/
+data/processed/*.rds
+data/processed/*.gct
+
+# External CIBERSORTx input/output can include large platform-generated files.
+# Reviewer-facing downstream regression outputs remain tracked under results/tables/.
+data/external/CIBERSORTx/*Results*.txt
+
+# Keep generated reviewer-facing outputs visible in the release.
+!results/
+!results/.gitkeep
+!results/tables/
+!results/tables/.gitkeep
+!results/tables/*.tsv
+!results/tables/*.csv
+!results/figures/
+!results/figures/.gitkeep
+!results/figures/*.pdf
+!results/figures/*.png
+!results/logs/
+!results/logs/.gitkeep
+!results/revision_summary/
+!results/revision_summary/.gitkeep
+!results/revision_summary/*.tsv
+!results/revision_summary/*.csv
+!results/revision_audit/
+!results/revision_audit/*.csv
+!results/revision_audit/*.tsv
+
+!paper_package/
+!paper_package/figures/
+!paper_package/figures/.gitkeep
+!paper_package/figures/*.pdf
+!paper_package/figures/*.png
+
+!manuscript/
+!manuscript/tables/
+!manuscript/tables/.gitkeep
+!manuscript/tables/*.csv
+!manuscript/tables/*.tsv
+!manuscript/supplementary_tables/
+!manuscript/supplementary_tables/*.tsv
+!manuscript/supplementary_tables/*.docx
+
+# R/session artifacts
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Directory placeholders
+data/raw/.gitkeep
+!data/raw/.gitkeep
+!data/raw/GEO/
+!data/raw/GEO/.gitkeep
+!data/processed/
+data/processed/.gitkeep
+!data/processed/.gitkeep
+!data/external/
+!data/external/CIBERSORTx/
+data/external/CIBERSORTx/.gitkeep
+!data/external/CIBERSORTx/.gitkeep

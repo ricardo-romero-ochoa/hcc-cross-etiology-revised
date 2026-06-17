@@ -1,0 +1,56 @@
+category	file_or_folder	description	required_for_reproducibility	object_type	strict_audit	required_flag	strict_flag	exists	size_bytes	nonempty	audit_mode	checked_at
+source	R/_shared.R	Shared functions for curation, scoring, statistics, and plotting	yes	source	yes	TRUE	TRUE	TRUE	19685	TRUE	source_only	2026-06-17 10:36:46 CST
+config	config/analysis.yml	Global analysis settings and revision toggles	yes	source	yes	TRUE	TRUE	TRUE	589	TRUE	source_only	2026-06-17 10:36:46 CST
+config	config/datasets.yml	Cohort registry, roles, etiology labels, and parsing rules	yes	source	yes	TRUE	TRUE	TRUE	2345	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/00_install_packages.R	Dependency installation script	yes	source	yes	TRUE	TRUE	TRUE	803	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/01_dataset_inventory.R	Dataset inventory and inclusion/exclusion criteria	yes	source	yes	TRUE	TRUE	TRUE	2298	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/02_download_and_curate_geo.R	GEO acquisition, metadata curation, and preprocessing	yes	source	yes	TRUE	TRUE	TRUE	1671	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/03_discovery_hallmark_gsva.R	Discovery Hallmark pathway scoring and contrasts	yes	source	yes	TRUE	TRUE	TRUE	2274	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/03b_derive_hepatitis_axes.R	HBV injury-axis derivation and gene-set export	yes	source	yes	TRUE	TRUE	TRUE	7508	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/04_meta_modules.R	Gene-level meta-analysis and ProlifHub/HepLoss module construction	yes	source	yes	TRUE	TRUE	TRUE	6140	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/05_validate_geo_cohorts.R	External GEO cohort validation	yes	source	yes	TRUE	TRUE	TRUE	1052	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/06_tcga_lihc_pipeline.R	TCGA-LIHC module scoring and Cox survival modeling	yes	source	yes	TRUE	TRUE	TRUE	16881	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/06b_tcga_survival_cox_from_cached_inputs.R	Rebuild TCGA Cox models from cached module-score/clinical table	yes	source	yes	TRUE	TRUE	TRUE	4944	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/08_cibersortx_export_GSE121248.R	CIBERSORTx mixture export from GSE121248	yes	source	yes	TRUE	TRUE	TRUE	798	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/09_cibersortx_adjusted_regression_GSE121248.R	CIBERSORTx-adjusted HBV injury regression	yes	source	yes	TRUE	TRUE	TRUE	19970	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/10_module_size_sensitivity.R	Module-size robustness analysis	yes	source	yes	TRUE	TRUE	TRUE	822	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/11_make_revision_figures.R	Main revision figure generation	yes	source	yes	TRUE	TRUE	TRUE	4268	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/11b_make_missing_figures.R	Additional main figure generation	yes	source	yes	TRUE	TRUE	TRUE	14325	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/12_make_manuscript_tables.R	Manuscript table generation	yes	source	yes	TRUE	TRUE	TRUE	5295	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/13_summarize_revision_results.R	Consolidated revision summaries	yes	source	yes	TRUE	TRUE	TRUE	2872	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/14_make_supplementary_figures.R	Supplementary figure generation	yes	source	yes	TRUE	TRUE	TRUE	24089	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/15_make_supplementary_tables.R	Supplementary table generation	yes	source	yes	TRUE	TRUE	TRUE	21454	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/16_revision_repository_audit.R	Final reviewer-facing repository audit	yes	source	yes	TRUE	TRUE	TRUE	3968	TRUE	source_only	2026-06-17 10:36:46 CST
+script	scripts/run_all.R	Main pipeline launcher	yes	source	yes	TRUE	TRUE	TRUE	2061	TRUE	source_only	2026-06-17 10:36:46 CST
+metadata	results/tables/dataset_inventory.tsv	Curated dataset inventory	yes	generated	yes	TRUE	TRUE	TRUE	1366	TRUE	source_only	2026-06-17 10:36:46 CST
+metadata	results/tables/inclusion_exclusion_criteria.tsv	Cohort inclusion/exclusion criteria	yes	generated	yes	TRUE	TRUE	TRUE	895	TRUE	source_only	2026-06-17 10:36:46 CST
+metadata	results/tables/inclusion_exclusion_table.tsv	Compatibility alias for cohort inclusion/exclusion criteria	yes	generated	yes	TRUE	TRUE	TRUE	895	TRUE	source_only	2026-06-17 10:36:46 CST
+metadata	results/tables/tissue_label_audit.tsv	Tumor/non-tumor label audit across GEO cohorts	yes	generated	yes	TRUE	TRUE	TRUE	452	TRUE	source_only	2026-06-17 10:36:46 CST
+metadata	results/tables/gene_symbol_overlap_audit.tsv	Gene-symbol overlap audit for Hallmark and module scoring	yes	generated	yes	TRUE	TRUE	TRUE	1406	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/module_gene_panels_top20.tsv	Primary ProlifHub and HepLoss module definitions	yes	generated	yes	TRUE	TRUE	TRUE	861	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/module_gene_panels_top10.tsv	Sensitivity module definitions, top 10	yes	generated	yes	TRUE	TRUE	TRUE	444	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/module_gene_panels_top15.tsv	Sensitivity module definitions, top 15	yes	generated	yes	TRUE	TRUE	TRUE	654	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/module_gene_panels_top30.tsv	Sensitivity module definitions, top 30	yes	generated	yes	TRUE	TRUE	TRUE	1279	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/module_gene_panels_top50.tsv	Sensitivity module definitions, top 50	yes	generated	yes	TRUE	TRUE	TRUE	2143	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/HBV_INJURY_TOP_2000_gene_set.tsv	Primary compact HBV injury gene set	yes	generated	yes	TRUE	TRUE	TRUE	307190	TRUE	source_only	2026-06-17 10:36:46 CST
+module_definition	results/tables/HBV_INJURY_EXTENDED_7792_gene_set.tsv	Extended FDR-defined HBV injury sensitivity gene set	yes	generated	yes	TRUE	TRUE	TRUE	1348450	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/discovery_hallmark_combined.tsv	Discovery Hallmark pathway differential activity summary	yes	generated	yes	TRUE	TRUE	TRUE	11687	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/meta_analysis_with_heterogeneity.tsv	Gene-level meta-analysis with heterogeneity statistics	yes	generated	yes	TRUE	TRUE	TRUE	8417821	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/geo_validation_summary.tsv	External validation statistics for module scores	yes	generated	yes	TRUE	TRUE	TRUE	3492	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/module_size_robustness.tsv	Module-size robustness summary	yes	generated	yes	TRUE	TRUE	TRUE	6152	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/GSE83148_HBV_INJURY_derivation_full.tsv	Full HBV injury-axis derivation output from GSE83148	yes	generated	yes	TRUE	TRUE	TRUE	3944974	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/gse121248_hbv_injury_topN_extended_manuscript_summary.tsv	HBV injury adjusted-regression summary for manuscript	yes	generated	yes	TRUE	TRUE	TRUE	4240	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/tcga_lihc_module_scores.tsv	TCGA-LIHC module scores	yes	generated	yes	TRUE	TRUE	TRUE	130829	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/tcga_lihc_module_scores_with_clinical.tsv	TCGA-LIHC module scores merged with clinical data	yes	generated	yes	TRUE	TRUE	TRUE	410725	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/tcga_lihc_survival_model_input.tsv	TCGA-LIHC survival model input table	yes	generated	yes	TRUE	TRUE	TRUE	379218	TRUE	source_only	2026-06-17 10:36:46 CST
+results	results/tables/tcga_lihc_survival_cox_models.tsv	TCGA-LIHC Cox proportional-hazards model output	yes	generated	yes	TRUE	TRUE	TRUE	7511	TRUE	source_only	2026-06-17 10:36:46 CST
+figure_ready	results/figures/Fig1_revised_workflow.pdf	Figure 1 PDF	yes	generated	yes	TRUE	TRUE	TRUE	5879	TRUE	source_only	2026-06-17 10:36:46 CST
+figure_ready	results/figures/Fig2_hallmark_dotplot.pdf	Figure 2 PDF	yes	generated	yes	TRUE	TRUE	TRUE	9206	TRUE	source_only	2026-06-17 10:36:46 CST
+figure_ready	results/figures/Fig3_discovery_module_boxplots.pdf	Figure 3 PDF	yes	generated	yes	TRUE	TRUE	TRUE	31489	TRUE	source_only	2026-06-17 10:36:46 CST
+figure_ready	results/figures/Fig4_multicohort_validation.pdf	Figure 4 PDF	yes	generated	yes	TRUE	TRUE	TRUE	5765	TRUE	source_only	2026-06-17 10:36:46 CST
+figure_ready	results/figures/Fig5_HBV_INJURY_adjusted_coefficients.pdf	Figure 5 PDF	yes	generated	yes	TRUE	TRUE	TRUE	6240	TRUE	source_only	2026-06-17 10:36:46 CST
+supplement	manuscript/tables/Table1_meta_summary.csv	Manuscript Table 1 source table	yes	generated	yes	TRUE	TRUE	TRUE	292	TRUE	source_only	2026-06-17 10:36:46 CST
+supplement	manuscript/tables/Table2_HBV_injury_regression.csv	Manuscript Table 2 source table	yes	generated	yes	TRUE	TRUE	TRUE	727	TRUE	source_only	2026-06-17 10:36:46 CST
+supplement	manuscript/tables/Table3_TCGA_Cox.csv	Manuscript Table 3 source table	yes	generated	yes	TRUE	TRUE	TRUE	636	TRUE	source_only	2026-06-17 10:36:46 CST
+supplement	manuscript/supplementary_tables/Supplementary_Table_Index.tsv	Supplementary table index	yes	generated	yes	TRUE	TRUE	TRUE	2521	TRUE	source_only	2026-06-17 10:36:46 CST
+audit	results/revision_audit/repository_manifest_audit.csv	Output of strict repository audit	no	generated	no	FALSE	FALSE	TRUE	10107	TRUE	source_only	2026-06-17 10:36:46 CST

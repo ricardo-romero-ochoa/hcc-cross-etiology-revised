@@ -1,0 +1,9 @@
+HBV injury set,Role,Model,Tumor coefficient,Effect retained vs unadjusted,p-value,95% CI
+TOP 2000,Primary compact,Unadjusted,0.237,100%,0.00203,0.0886–0.3855
+TOP 2000,Primary compact,E2F/G2M adjusted,0.13,55%,0.153,-0.0494–0.3102
+TOP 2000,Primary compact,E2F/G2M + CIBERSORTx PC,0.19,80.2%,0.022,0.0281–0.3523
+TOP 2000,Primary compact,E2F/G2M + selected fractions,0.188,79.4%,0.0144,0.0383–0.338
+EXTENDED 7792,Sensitivity,Unadjusted,0.233,100%,5.92e-9,0.16–0.3056
+EXTENDED 7792,Sensitivity,E2F/G2M adjusted,0.125,53.7%,0.00408,0.0406–0.2094
+EXTENDED 7792,Sensitivity,E2F/G2M + CIBERSORTx PC,0.148,63.4%,5e-4,0.0662–0.2289
+EXTENDED 7792,Sensitivity,E2F/G2M + selected fractions,0.133,57.3%,5.18e-4,0.0597–0.2071

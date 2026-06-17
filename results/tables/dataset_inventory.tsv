@@ -1,0 +1,12 @@
+section	accession	role	etiology	included	inclusion_reason	exclusion_reason
+discovery	GSE121248	discovery_hbv_hcc	HBV	TRUE	Paired or comparable tumor/non-tumor HCC cohort used for discovery.	NA
+discovery	GSE41804	discovery_hcv_hcc	HCV	TRUE	Paired or comparable tumor/non-tumor HCC cohort used for discovery.	NA
+hepatitis_axes	GSE83148	hbv_injury_axis	HBV	TRUE	Non-tumor hepatitis-stage cohort used to derive external biological axes.	NA
+hepatitis_axes	GSE38941	alf_axis	HBV_ALF	TRUE	Non-tumor hepatitis-stage cohort used to derive external biological axes.	NA
+validation	GSE14520	original_external_validation	mixed	TRUE	Independent HCC cohort used for external validation.	NA
+validation	GSE25097	added_external_validation	mixed	TRUE	Independent HCC cohort used for external validation.	NA
+validation	GSE76427	added_external_validation	mixed	TRUE	Independent HCC cohort used for external validation.	NA
+validation	GSE36376	added_external_validation	mixed	TRUE	Independent HCC cohort used for external validation.	NA
+validation	GSE57957	added_external_validation	mixed	TRUE	Independent HCC cohort used for external validation.	NA
+validation	GSE45267	added_external_validation	mixed	TRUE	Independent HCC cohort used for external validation.	NA
+validation	GSE112790	added_external_validation_tumor_heavy	mixed	TRUE	Independent HCC cohort used for external validation.	NA

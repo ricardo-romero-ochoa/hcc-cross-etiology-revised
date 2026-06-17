@@ -1,0 +1,45 @@
+column	n_non_missing	n_unique	example_values
+sample_id	128	128	GSM2195416 | GSM2195417 | GSM2195418 | GSM2195419 | GSM2195420 | GSM2195421 | GSM2195422 | GSM2195423
+title	128	128	Human_HBV_sample_Hep-0002 | Human_HBV_sample_Hep-0003 | Human_HBV_sample_Hep-0004 | Human_HBV_sample_Hep-0006 | Human_HBV_sample_Hep-0007 | Human_HBV_sample_Hep-0024 | Human_HBV_sample_Hep-0025 | Human_HBV_sample_Hep-0026
+geo_accession	128	128	GSM2195416 | GSM2195417 | GSM2195418 | GSM2195419 | GSM2195420 | GSM2195421 | GSM2195422 | GSM2195423
+status	128	1	Public on Feb 28 2017
+submission_date	128	2	Jun 09 2016 | Aug 24 2016
+last_update_date	128	1	Feb 28 2017
+type	128	1	RNA
+channel_count	128	1	1
+source_name_ch1	128	2	positive HBsAg or serum HBV-DNA | Healthy liver
+organism_ch1	128	1	Homo sapiens
+characteristics_ch1	128	1	tissue: liver
+characteristics_ch1.1	128	3	alt: >40 | alt: NON | alt: <=40
+characteristics_ch1.2	128	3	ast: >35 | ast: NON | ast: <=35
+characteristics_ch1.3	128	3	hbv-dna: <=10E6 | hbv-dna: NON | hbv-dna: >10E6
+molecule_ch1	128	1	total RNA
+extract_protocol_ch1	128	1	All samples were obtained by liver biopsy and blood sampling, and liver tissues were preserved at -80℃. Liver tissue cRNA was extracted and processed by GeneChip Human Genome U133 Plus 2.0 Arrays.
+label_ch1	128	1	biotin
+label_protocol_ch1	128	1	not provided
+taxid_ch1	128	1	9606
+hyb_protocol	128	1	not provided
+scan_protocol	128	1	not provided
+description	128	2	Gene expression data from liver tissue of HBV infected patients | Gene expression data from liver tissue of healthy patients.
+description.1	6	2	Liver tissue cRNA
+data_processing	128	1	CEL files were performed by Affymetrix Expression Console. Probe set signals were normalized and summarized by the robust multi-array average (RMA) algorithm to adjust different batch effects. All samples passed quality control and were then annotated.
+platform_id	128	1	GPL570
+contact_name	128	1	Weichen,,Zhou
+contact_email	128	1	arthurzhou10@gmail.com
+contact_phone	128	1	7346047476
+contact_institute	128	1	Fudan University
+contact_address	128	1	800 fuller St. 26
+contact_city	128	1	Ann Arbor
+contact_state	128	1	Michigan
+contact_zip/postal_code	128	1	48104
+contact_country	128	1	USA
+supplementary_file	128	128	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195416/suppl/GSM2195416_Hep-0002.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195417/suppl/GSM2195417_Hep-0003.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195418/suppl/GSM2195418_Hep-0004.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195419/suppl/GSM2195419_Hep-0006.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195420/suppl/GSM2195420_Hep-0007.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195421/suppl/GSM2195421_Hep-0024.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195422/suppl/GSM2195422_Hep-0025.CEL.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195423/suppl/GSM2195423_Hep-0026.CEL.gz
+supplementary_file.1	128	128	ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195416/suppl/GSM2195416_Hep-0002.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195417/suppl/GSM2195417_Hep-0003.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195418/suppl/GSM2195418_Hep-0004.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195419/suppl/GSM2195419_Hep-0006.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195420/suppl/GSM2195420_Hep-0007.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195421/suppl/GSM2195421_Hep-0024.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195422/suppl/GSM2195422_Hep-0025.rma.chp.gz | ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2195nnn/GSM2195423/suppl/GSM2195423_Hep-0026.rma.chp.gz
+data_row_count	128	1	54675
+alt:ch1	128	3	>40 | NON | <=40
+ast:ch1	128	3	>35 | NON | <=35
+hbv-dna:ch1	128	3	<=10E6 | NON | >10E6
+tissue:ch1	128	1	liver
+accession	128	1	GSE83148
+role	128	1	hbv_injury_axis
+etiology	128	1	HBV

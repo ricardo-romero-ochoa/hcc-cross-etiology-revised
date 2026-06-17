@@ -1,0 +1,11 @@
+Metric,Value
+Meta-analysis rows,21753
+Estimable genes,21753
+Non-estimable genes,0
+Genes with fixed-effect meta-analysis FDR < 0.05,12444
+Median I²,0
+Mean I²,25.70889499331302
+Genes with I² > 50,6249
+Median τ² (REML),0
+Mean τ² (REML),0.06912329910001506
+Genes with τ² (REML) > 0,9780

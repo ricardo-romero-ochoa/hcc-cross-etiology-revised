@@ -1,0 +1,10 @@
+Model,Score,HR per SD,95% CI,p-value,n,events
+Score only,ProlifHubScore,1.439,1.2–1.726,8.46e-5,369,130
+Score only,HepLossScore,0.863,0.713–1.045,0.131,369,130
+Score only,HCCStateScore,1.428,1.168–1.745,5.07e-4,369,130
+Age/sex adjusted,ProlifHubScore,1.485,1.231–1.791,3.51e-5,369,130
+Age/sex adjusted,HepLossScore,0.866,0.714–1.049,0.14,369,130
+Age/sex adjusted,HCCStateScore,1.448,1.18–1.777,3.92e-4,369,130
+Age/sex/stage adjusted,ProlifHubScore,1.439,1.129–1.834,0.00324,173,74
+Age/sex/stage adjusted,HepLossScore,0.882,0.661–1.177,0.394,173,74
+Age/sex/stage adjusted,HCCStateScore,1.508,1.122–2.025,0.00641,173,74

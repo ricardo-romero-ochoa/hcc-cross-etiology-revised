@@ -1,0 +1,2 @@
+meta_analysis_rows	estimable_genes	non_estimable_genes	genes_FE_FDR_lt_0_05	median_I2	mean_I2	genes_I2_gt_50	median_tau2_REML	mean_tau2_REML	genes_tau2_REML_gt_0
+21753	21753	0	12444	0	25.70889499331302	6249	0	0.06912329910001506	9780
