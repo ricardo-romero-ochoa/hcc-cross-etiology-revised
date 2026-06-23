@@ -1,0 +1,10 @@
+Score,Model,Covariates,n,events,HR per SD,95% CI,p-value,PH global p,PH score-term p
+ProlifHubScore,score_only,None; score only,369,130,1.4393,1.2003–1.7259,8.462e-05,[from cox.zph global p],[from cox.zph score-term p]
+HepLossScore,score_only,None; score only,369,130,0.8630,0.7130–1.0446,0.1306,[from cox.zph global p],[from cox.zph score-term p]
+HCCStateScore,score_only,None; score only,369,130,1.4277,1.1681–1.7451,5.068e-04,[from cox.zph global p],[from cox.zph score-term p]
+ProlifHubScore,age_sex_adjusted,Age and sex,369,130,1.4852,1.2314–1.7912,3.506e-05,[from cox.zph global p],[from cox.zph score-term p]
+HepLossScore,age_sex_adjusted,Age and sex,369,130,0.8655,0.7144–1.0487,0.1404,[from cox.zph global p],[from cox.zph score-term p]
+HCCStateScore,age_sex_adjusted,Age and sex,369,130,1.4479,1.1800–1.7766,3.923e-04,[from cox.zph global p],[from cox.zph score-term p]
+ProlifHubScore,age_sex_stage_adjusted,"Age, sex, and pathologic stage",173,74,1.4392,1.1294–1.8339,0.0032,[from cox.zph global p],[from cox.zph score-term p]
+HepLossScore,age_sex_stage_adjusted,"Age, sex, and pathologic stage",173,74,0.8820,0.6608–1.1772,0.3939,[from cox.zph global p],[from cox.zph score-term p]
+HCCStateScore,age_sex_stage_adjusted,"Age, sex, and pathologic stage",173,74,1.5075,1.1222–2.0251,0.0064,[from cox.zph global p],[from cox.zph score-term p]

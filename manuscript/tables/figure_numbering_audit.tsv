@@ -1,0 +1,12 @@
+document	figure_number	title	status
+main manuscript	Figure 1	Study design and analysis workflow	Verified in main manuscript
+main manuscript	Figure 2	Cross-etiology Hallmark program shifts	Verified in main manuscript
+main manuscript	Figure 3	Discovery-cohort module score behavior	Verified in main manuscript
+main manuscript	Figure 4	Multi-cohort tissue-level validation of HCCStateScore	Verified in main manuscript
+main manuscript	Figure 5	HBV injury-axis adjusted coefficient plot	Verified in main manuscript
+supplementary figures	Supplementary Figure S1	Discovery-cohort quality control by MDS	Verified in supplementary figures
+supplementary figures	Supplementary Figure S2	Hallmark activity shifts in HBV-associated HCC	Verified in supplementary figures
+supplementary figures	Supplementary Figure S3	Module-size robustness	Verified in supplementary figures
+supplementary figures	Supplementary Figure S4	HBV injury top-N sensitivity	Verified in supplementary figures
+supplementary figures	Supplementary Figure S5	CIBERSORTx immune-composition structure	Verified in supplementary figures
+supplementary figures	Supplementary Figure S6	TCGA-LIHC Cox model forest plot	Verified in supplementary figures
