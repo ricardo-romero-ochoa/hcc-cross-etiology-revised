@@ -1,0 +1,13 @@
+cohort_accession,etiology,platform,tissue_type,n_tumor,n_non_tumor,use_in_analysis,inclusion_exclusion_rationale
+GSE121248,HBV,GPL570 (Affymetrix HG-U133 Plus 2.0),HCC tumor and paired adjacent/non-tumor liver,70,37,discovery_hbv_hcc,Included: Paired or comparable tumor/non-tumor HCC cohort used for discovery.
+GSE41804,HCV,GPL570 (Affymetrix HG-U133 Plus 2.0),HCC tumor and adjacent/non-tumor liver,20,20,discovery_hcv_hcc,Included: Paired or comparable tumor/non-tumor HCC cohort used for discovery.
+GSE83148,HBV,GPL570 (Affymetrix HG-U133 Plus 2.0),Chronic HBV hepatitis liver and healthy liver; no HCC tumors,NA,NA,hbv_injury_axis,Included for HBV injury-axis derivation only; excluded from tumor/non-tumor HCC validation.
+GSE38941,HBV_ALF,GPL570 (Affymetrix HG-U133 Plus 2.0),HBV-associated acute liver failure explanted liver and normal donor liver; no HCC tumors,NA,NA,alf_axis,Included only as contextual HBV liver-injury reference; excluded from HCC tumor/non-tumor validation.
+GSE14520,mixed,GPL3921 + GPL571 (Affymetrix HT HG-U133A / HG-U133A 2.0),HCC tumor and adjacent/non-tumor liver,225,220,original_external_validation,Included: Independent HCC cohort used for external validation.
+GSE25097,mixed,GPL10687 (Rosetta/Merck Human RSTA Custom Affymetrix 1.0),HCC tumor and non-tumor/adjacent/healthy/cirrhotic liver where labels were recoverable,268,289,added_external_validation,Included: Independent HCC cohort used for external validation.
+GSE76427,mixed,GPL10558 (Illumina HumanHT-12 V4.0),HCC tumor and adjacent/non-tumor liver,115,52,added_external_validation,Included: Independent HCC cohort used for external validation.
+GSE36376,mixed,GPL10558 (Illumina HumanHT-12 V4.0),HCC tumor and non-tumor/adjacent liver,240,193,added_external_validation,Included: Independent HCC cohort used for external validation.
+GSE57957,mixed,GPL10558 (Illumina HumanHT-12 V4.0),HCC tumor and adjacent/non-tumor liver,39,39,added_external_validation,Included: Independent HCC cohort used for external validation.
+GSE45267,mixed,GPL570 (Affymetrix HG-U133 Plus 2.0),HCC tumor and adjacent/non-tumor liver,46,41,added_external_validation,Included: Independent HCC cohort used for external validation.
+GSE112790,mixed,GPL570 (Affymetrix HG-U133 Plus 2.0),HCC tumor and limited adjacent/non-tumor liver,183,15,added_external_validation_tumor_heavy,Included: Independent HCC cohort used for external validation.
+TCGA-LIHC,mixed/clinical TCGA-LIHC,RNA-seq STAR-counts / GDC-TCGA,Primary HCC tumor RNA-seq with clinical follow-up; solid normal samples parsed when available,369,NA,RNA-seq module scoring and overall-survival Cox modeling,Included for independent RNA-seq prognostic-coherence assessment and clinical modeling; not used to derive GEO microarray modules.
